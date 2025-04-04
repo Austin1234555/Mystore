@@ -15,7 +15,9 @@ const ProductDetails = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
-  };
+    window.alert("This product is added to the cart");
+};
+
 
   return product ? (
     <div className="product-detail-container">

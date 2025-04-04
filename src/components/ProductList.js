@@ -47,7 +47,7 @@ const ProductList = ({ priceFilter, searchQuery }) => {
 
   return (
     <div className="amazon-container">
-      {/* Category Filters */}
+      {}
       <div className="category-filters">
         <h3>Filter by Category</h3>
         {categories.map((category) => (
@@ -80,6 +80,10 @@ const ProductList = ({ priceFilter, searchQuery }) => {
                   if (!wishlist.find((item) => item.id === product.id)) {
                     wishlist.push(product);
                     localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                    window.alert("This product is added to the wishlist");
+                  }
+                  else{
+                    window.alert("This is already added to the Wishlist");
                   }
                 }}
               >
