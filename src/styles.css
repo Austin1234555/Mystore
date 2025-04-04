@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    color: #111;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232f3e;
+    padding: 15px 20px;
+    color: white;
+}
+
+.nav-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    background: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f7ca00;
+}
+
+.amazon-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 35px;
+    flex: 1;
+}
+
+.amazon-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.amazon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.amazon-image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.amazon-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+}
+
+.amazon-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b12704;
+}
+
+.amazon-price::before {
+    content: "\u20B9";
+}
+
+.amazon-button {
+    background-color: #ffd814;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.amazon-button:hover {
+    background-color: #f7ca00;
+}
+
+.wishlist-page, .cart-page {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-list, .cart-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.wishlist-item, .cart-item {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.wishlist-item:hover, .cart-item:hover {
+    transform: translateY(-5px);
+}
+
+.wishlist-item img, .cart-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.filter-sort label {
+    font-weight: bold;
+}
+
+.filter-sort select {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-sort select:hover {
+    border-color: #b12704;
+}
+
+.category-filters {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.category-filters h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.category-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.category-checkbox input {
+    transform: scale(1.2);
+    cursor: pointer;
+}
